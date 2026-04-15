@@ -1,137 +1,154 @@
-# 🎬 Seedance Skills — Golden Angel Method
+# 🎬 Seedance Skills — שיטת Golden Angel
 
-> The most advanced prompt engineering system for **Seedance 2.0** — reverse-engineered from the cinematic "Golden Angel" project.
+> מערכת הנדסת פרומפטים המתקדמת ביותר עבור **Seedance 2.0** — פוצחה מתוך ניתוח עמוק של הפרויקט הסינמטי "Golden Angel".
 
-[![Skills](https://img.shields.io/badge/skills-3-blueviolet?style=flat-square)](#skills)
-[![Method](https://img.shields.io/badge/method-Golden%20Angel-gold?style=flat-square)](#the-golden-angel-method)
-[![Platform](https://img.shields.io/badge/platform-Hermes%20Agent-black?style=flat-square)](https://github.com/hermesagent)
-[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](#license)
-
----
-
-## What Is This?
-
-This repo contains 3 production-ready `.skill` files for [Hermes Agent](https://github.com/hermesagent) that transform any generic video idea into a **cinematic, multi-clip Seedance 2.0 sequence** — with full visual consistency, controlled camera movement, and a unique anti-heroic tone.
-
-The system was built by deeply analyzing the prompts from **"The Golden Angel"** — a dark tokusatsu cinematic project that achieved unprecedented visual continuity across multiple AI-generated clips.
+[![Skills](https://img.shields.io/badge/סקילים-3-blueviolet?style=flat-square)](#סקילים)
+[![Method](https://img.shields.io/badge/שיטה-Golden%20Angel-gold?style=flat-square)](#שיטת-golden-angel)
+[![Platform](https://img.shields.io/badge/פלטפורמה-Hermes%20Agent-black?style=flat-square)](https://github.com/hermesagent)
+[![License](https://img.shields.io/badge/רישיון-MIT-green?style=flat-square)](#רישיון)
 
 ---
 
-## The Golden Angel Method
+## 📋 תוכן עניינים
 
-Three core principles extracted from the original project:
+- [מה זה?](#מה-זה)
+- [שיטת Golden Angel](#שיטת-golden-angel)
+- [סקילים](#סקילים)
+  - [seedance-prompt-master](#-seedance-prompt-masterskill)
+  - [seedance-15sec-technique](#-seedance-15sec-techniqueskill)
+  - [golden-angel-template](#-golden-angel-templateskill)
+- [התקנה](#התקנה)
+- [איך זה עובד](#איך-זה-עובד)
+- [דוגמת פרומפט](#דוגמת-פרומפט)
+- [תאימות](#תאימות)
+- [קרדיטים](#קרדיטים)
+- [רישיון](#רישיון)
 
-### 1. 🔒 Visual Style Lock
-One spec. Copied **exactly** across every clip. No drift, no variation.
+---
+
+## מה זה?
+
+ריפו זה מכיל 3 קבצי `.skill` מוכנים לשימוש עבור [Hermes Agent](https://github.com/hermesagent) שהופכים כל רעיון גנרי לסרטון ל**סדרת קליפים סינמטית ב-Seedance 2.0** — עם עקביות ויזואלית מלאה, תנועת מצלמה מחושבת, וטון ייחודי של כוח כבד ופיזי.
+
+המערכת נבנתה מתוך ניתוח מעמיק של הפרומפטים מפרויקט **"The Golden Angel"** — פרויקט טוקוסאצו סינמטי כהה שהשיג רמת עקביות ויזואלית שטרם נראתה בקליפי AI מרובים.
+
+---
+
+## שיטת Golden Angel
+
+שלושה עקרונות מרכזיים שחולצו מהפרויקט המקורי:
+
+### 1. 🔒 Visual Style Lock — נעילת סגנון
+מפרט אחד. מועתק **בדיוק** בכל קליפ. ללא סטייה, ללא שינוי.
 ```
 Cinematic IMAX look, Panavision C-series, 35mm, f4
 Low-saturation grey-blue palette, compressed shadows with texture,
 slight edge softness, moderate film grain
 ```
 
-### 2. 🎥 Camera Handoff
-The **end position** of clip N becomes the **start position** of clip N+1.
-Plan the entire camera journey before generating a single frame.
+### 2. 🎥 Camera Handoff — מסירת מצלמה
+ה**end position** של קליפ N הופך ל**start position** של קליפ N+1.
+תכנן את כל מסלול המצלמה לפני שמייצרים פריים אחד.
 ```
-Clip 1: Start low-angle right → End high-angle left profile
-Clip 2: Start high-angle left profile → End stabilized handheld
-Clip 3: Start stabilized handheld → End slightly below, unstable
+קליפ 1: התחלה low-angle ימין → סיום high-angle שמאל
+קליפ 2: התחלה high-angle שמאל → סיום handheld מיוצב
+קליפ 3: התחלה handheld מיוצב → סיום מלמטה, לא יציב
 ```
 
-### 3. ⚡ Anti-Heroic Constraint
-Every moment of power is paired with physical cost. No glowing heroes.
-No triumphant poses. Everything is heavy, forced, and real.
+### 3. ⚡ Anti-Heroic Constraint — עיקרון אנטי-גיבורי
+כל רגע של כוח מלווה בעלות פיזית. אין גיבורים זוהרים.
+אין פוזות ניצחון. הכל כבד, מאולץ, ואמיתי.
 ```
-"yanked upward abruptly, not graceful flight"
-"sword moves once — short, direct motion, no flourish"
-"enemies still remain — scattered, not defeated"
+"נשלף כלפי מעלה בפתאומיות — לא טיסה חינה"
+"החרב זזה פעם אחת — תנועה קצרה, ישירה, ללא פלורש"
+"האויבים עדיין נמצאים — מפוזרים, לא מובסים"
 ```
 
 ---
 
-## Skills
+## סקילים
 
 ### 📦 `seedance-prompt-master.skill`
-The complete single-prompt building system based on Golden Angel architecture.
+מערכת בניית הפרומפט המלאה מבוססת ארכיטקטורת Golden Angel.
 
-**Includes:**
-- Full 8-block prompt structure (Core Theme → Character → Visual Style → Camera → 5×3s Sequence → End State → Finish Lock)
-- Anti-Heroic constraint table
-- Environment-as-reaction principle
-- Camera-as-character principle
-- Color grade & lens reference tables
-- Step-by-step workflow
+**מה כלול:**
+- מבנה פרומפט מלא ב-8 בלוקים (Core Theme ← Character ← Visual Style ← Camera ← רצף 5×3 שניות ← End State ← Finish Lock)
+- טבלת עיקרון Anti-Heroic
+- עיקרון הסביבה-כ-תגובה
+- עיקרון המצלמה-כ-דמות
+- טבלות color grade ועדשות
+- Workflow שלב-אחר-שלב
 
-**Trigger phrases:**
-`"write me a prompt"` / `"upgrade my prompt"` / `"Seedance prompt"` / any scene description
+**ביטויי הפעלה:**
+`"תכתוב לי פרומפט"` / `"שדרג לי פרומפט"` / `"Seedance prompt"` / כל תיאור סצנה
 
 ---
 
 ### 📦 `seedance-15sec-technique.skill`
-The multi-clip chaining system for building videos longer than 15 seconds with full continuity.
+מערכת שרשור קליפים מרובים לבניית סרטונים ארוכים מ-15 שניות עם המשכיות מלאה.
 
-**Includes:**
-- Camera Handoff planning (pre-generation)
-- Visual Style Lock (exact copy protocol)
-- Finish Block as consistency anchor
-- The `Continue the story...` formula
-- Common mistakes + fixes table
-- Real scenario templates (action, brand film, nature)
+**מה כלול:**
+- תכנון Camera Handoff לפני הגנרציה
+- פרוטוקול Visual Style Lock (העתקה מדויקת)
+- Finish Block כעוגן עקביות
+- נוסחת ה-`Continue the story...`
+- טבלת טעויות נפוצות + פתרונות
+- תבניות תרחישים אמיתיים (אקשן, Brand Film, טבע)
 
-**Trigger phrases:**
-`"15-second technique"` / `"extend the video"` / `"continuity"` / `"longer video"`
+**ביטויי הפעלה:**
+`"שיטת ה-15 שניות"` / `"הארך את הסרטון"` / `"המשכיות"` / `"סרטון ארוך"`
 
 ---
 
 ### 📦 `golden-angel-template.skill`
-A fill-in-the-blank template for building a complete 3-clip cinematic series from scratch.
+תבנית מילוי מלאה לבניית סדרת 3 קליפים סינמטית מאפס.
 
-**Includes:**
-- Pre-generation planning table (aesthetic name, camera handoff plan, narrative arc)
-- Full template for Clip 1 (transformation / opening)
-- Full template for Clip 2 (first pressure / encounter)
-- Full template for Clip 3 (escalation / crisis)
-- Pre-generation checklist for each clip
-- Anti-Heroic Quick Reference card
+**מה כלול:**
+- טבלת תכנון לפני הגנרציה (שם אסתטיקה, תכנון Camera Handoff, קשת נרטיבית)
+- תבנית מלאה לקליפ 1 (טרנספורמציה / פתיחה)
+- תבנית מלאה לקליפ 2 (לחץ ראשון / עימות)
+- תבנית מלאה לקליפ 3 (הסלמה / משבר)
+- רשימת בדיקה לכל קליפ לפני הגנרציה
+- כרטיס Anti-Heroic Quick Reference
 
-**Trigger phrases:**
-`"Golden Angel template"` / `"plan a series"` / `"3-clip sequence"` / `"cinematic series"`
+**ביטויי הפעלה:**
+`"תבנית Golden Angel"` / `"תכנן לי סדרה"` / `"3 קליפים"` / `"סדרה סינמטית"`
 
 ---
 
-## Installation
+## התקנה
 
-### Install a single skill
+### התקנת סקיל בודד
 
-1. Download the `.skill` file from this repo
-2. Send it to your Hermes Agent chat
-3. Done — installed instantly ✅
+1. הורד את קובץ ה-`.skill` מהריפו
+2. שלח אותו לצ'אט של Hermes Agent שלך
+3. זהו — מותקן תוך שנייה ✅
 
-### Install all 3 skills at once
+### התקנת כל 3 הסקילים בבת אחת
 
 ```bash
 git clone https://github.com/arielaizn/seedance-skills
 ```
-Then send each `.skill` file to Hermes Agent.
+לאחר מכן שלח כל קובץ `.skill` ל-Hermes Agent.
 
 ---
 
-## How It Works
+## איך זה עובד
 
-`.skill` files are ZIP archives containing a `SKILL.md` file with YAML frontmatter and structured markdown.  
-Hermes Agent reads the skill, loads it into context, and uses it to guide every prompt it writes.
+קבצי `.skill` הם ארכיוני ZIP המכילים קובץ `SKILL.md` עם YAML frontmatter ו-markdown מובנה.
+Hermes Agent קורא את הסקיל, טוען אותו לקונטקסט, ומשתמש בו להנחיית כל פרומפט שהוא כותב.
 
 ```
 seedance-prompt-master.skill
 └── seedance-prompt-master/
-    └── SKILL.md   ← YAML frontmatter + full methodology
+    └── SKILL.md   ← YAML frontmatter + מתודולוגיה מלאה
 ```
 
 ---
 
-## Example Output
+## דוגמת פרומפט
 
-A prompt generated using `seedance-prompt-master` + `golden-angel-template`:
+פרומפט שנוצר עם `seedance-prompt-master` + `golden-angel-template`:
 
 ```
 Core Theme: Dark realistic tokusatsu, BLACK SUN aesthetic,
@@ -155,35 +172,35 @@ Single continuous take
 Start low-angle right side, slow orbit to front, end high-angle left profile
 Subtle handheld "breathing" motion throughout
 
-0–3s   Stare — raises head, looks at right hand. Skin cracks, faint eye gleam.
-3–6s   Activation — hand clenches. Golden particles, pulse wave. Controlled pain.
-6–9s   Tear — six wings erupt. Camera shakes, loses focus, snaps back.
-9–12s  Growth — hair shifts platinum gold. Close-up emphasis.
-12–15s Completion — sword materializes. Camera finishes orbit to high-angle close-up.
+0–3s   凝視 — מרים ראש, מביט בידו הימנית. עור סדוק, ניצוץ עין.
+3–6s   הפעלה — אגרוף נקפץ. חלקיקי זהב, גל פולס. כאב נשלט.
+6–9s   קריעה — שש כנפיים פורצות. מצלמה רועדת, מאבדת פוקוס, חוזרת.
+9–12s  צמיחה — שיער משתנה לזהב פלטינה. דגש close-up.
+12–15s השלמה — חרב מתגשמת. מצלמה מסיימת orbit ל-high-angle close-up.
 
 Finish: Cinematic realism, Dolby Vision, 4K 60fps, no glow, dark blockbuster tone
 ```
 
 ---
 
-## Compatibility
+## תאימות
 
-| Platform | Status |
+| פלטפורמה | סטטוס |
 |----------|--------|
-| Hermes Agent | ✅ Native `.skill` support |
-| Seedance 2.0 | ✅ Optimized for |
-| Kie.ai | ✅ Works via Hermes seedance-video-studio skill |
+| Hermes Agent | ✅ תמיכה נייטיב ב-`.skill` |
+| Seedance 2.0 | ✅ אופטימיזציה מלאה |
+| Kie.ai | ✅ עובד דרך סקיל seedance-video-studio |
 
 ---
 
-## Credits
+## קרדיטים
 
-- **Prompt architecture:** Reverse-engineered from "The Golden Angel" project
-- **15-second technique:** Originally discovered by Daniel Biton
-- **Skill packaging:** [PixMind Studio](https://arielaizenshtat.com)
+- **ארכיטקטורת הפרומפטים:** חולצה מתוך פרויקט "The Golden Angel"
+- **שיטת ה-15 שניות:** התגלה במקור על ידי דניאל ביטון
+- **אריזת הסקילים:** [PixMind Studio](https://arielaizenshtat.com)
 
 ---
 
-## License
+## רישיון
 
-MIT — use freely, credit appreciated.
+MIT — שימוש חופשי, קרדיט מוערך.
